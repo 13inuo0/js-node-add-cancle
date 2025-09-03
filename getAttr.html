@@ -4,11 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .link {
+        color: red;
+        text-decoration: none;
+        background-color: azure;
+      }
+    </style>
   </head>
   <body>
     <a href="https://www.naver.com">naver</a>
     <script>
       const aEl = document.querySelector("a");
+      //   href 변수 저장만 함
+      const href = aEl.getAttribute("href");
+      aEl.setAttribute("href", "https://www.google.com");
+      console.log(aEl);
+      // 1.span 태그 만들기
+      // 2.글자 노드 만들기
+      // 3. span에 글자 연결
+      // notice에 span태그 연결
+      aEl.innerText = "google";
+      //   aEl.setAttribute("target", "_blank");
+      //   aEl.setAttribute("title", "구글로 이동");
+      //   aEl.setAttribute("class", "link");
+      //   aEl.setAttribute("id", "link");
+      object.assign(aEl, {
+        href: "https://www.google.com",
+        target: "_blank",
+        title: "구글로 이동",
+        class: "link",
+        id: "link",
+      });
     </script>
   </body>
 </html>
