@@ -35,7 +35,7 @@
       const checks = document.querySelectorAll("li");
       checks.forEach(function (chek) {
         // console.log(check);
-        chek.addEventListener("click", () => {
+        chek.addEventListener("click", function () {
           //   console.log(this);
           //   this.classList.add("completed");
           if (!this.classList.contains("completed")) {
